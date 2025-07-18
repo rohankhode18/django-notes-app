@@ -24,7 +24,7 @@ pipeline {
         stage("Pushing image") {
             steps {
                 script{
-                    echo "Pushing Docker Image to Docker Hub"
+                    echo "Pushing Image to Docker Hub"
                     docker_push("django-notes-app","latest","rohankhode")
                 }
             }
