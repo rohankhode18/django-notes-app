@@ -4,7 +4,6 @@ pipeline {
     agent { label "mike" }
     
     stages {
-
         stage("Code"){
             steps{
               script{
@@ -30,14 +29,12 @@ pipeline {
             }
         }
 
-
         stage("Deploy") {
             steps {
                 script{
                 echo "Deploying with Docker Compose"
                     docker_deploy()
                 }
-                
             }
         }
     }
